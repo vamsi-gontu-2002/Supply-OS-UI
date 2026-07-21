@@ -10,7 +10,7 @@
 
 }
 
-.summary-card {
+/*.summary-card {
 
     background: white;
 
@@ -34,7 +34,7 @@
 
     font-size: 34px;
 
-}
+}*/
 
 .supplier-filter {
 
@@ -210,5 +210,14 @@ Analytics
     color: #64748B;
 
     line-height: 1.6;
+
+}
+
+.suppliers-summary {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
 
 }
