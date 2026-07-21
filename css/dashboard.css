@@ -118,7 +118,7 @@
 
 .topbar h2 {
 
-    font-size: 34px;
+    font-size: 20px;
 
     font-weight: 700;
 
@@ -250,7 +250,7 @@
 
     margin: 8px 0;
 
-    font-size: 34px;
+    font-size: 20px;
 
     font-weight: 800;
 
@@ -810,7 +810,7 @@ AI PANEL
 
     margin-bottom: 8px;
 
-    font-size: 28px;
+    font-size: 20px;
 
 }
 
@@ -826,9 +826,9 @@ AI PANEL
 
 .score {
 
-    width: 110px;
+    width: 90px;
 
-    height: 110px;
+    height: 90px;
 
     border-radius: 50%;
 
@@ -842,8 +842,36 @@ AI PANEL
 
     align-items: center;
 
-    font-size: 34px;
+    font-size: 30px;
 
     font-weight: 800;
+
+}
+
+@media (max-width: 1600px) {
+
+    .content {
+        padding: 20px;
+    }
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .kpi-card {
+        padding: 20px;
+    }
+
+    .kpi-card h2 {
+        font-size: 28px;
+    }
+
+    .topbar h2 {
+        font-size: 28px;
+    }
+
+    .chart-container {
+        height: 260px;
+    }
 
 }
