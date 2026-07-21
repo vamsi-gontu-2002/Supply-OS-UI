@@ -185,3 +185,33 @@ body {
     font-weight: 700;
 
 }
+
+/* ===========================
+   Logout Button
+=========================== */
+
+.sidebar .logout {
+
+    margin-top: 40px;
+
+    border-top: 1px solid rgba(255, 255, 255, .15);
+
+    padding-top: 20px;
+
+}
+
+.sidebar .logout a {
+
+    color: #FCA5A5;
+
+    transition: .3s;
+
+}
+
+.sidebar .logout a:hover {
+
+    background: #DC2626;
+
+    color: #fff;
+
+}
