@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Warehouse Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/warehouse.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-cubes"></i>
+
+                <span>SupplyOS</span>
+
+            </div>
+
+            <ul>
+
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+
+                <li><a href="suppliers.html"><i class="fa-solid fa-truck-field"></i> Suppliers</a></li>
+
+                <li><a href="manufacturing.html"><i class="fa-solid fa-industry"></i> Manufacturing</a></li>
+
+                <li><a href="forecast.html"><i class="fa-solid fa-chart-area"></i> Forecast</a></li>
+
+                <li><a href="procurement.html"><i class="fa-solid fa-file-invoice"></i> Procurement</a></li>
+
+                <li class="active"><a href="warehouse.html"><i class="fa-solid fa-warehouse"></i> Warehouse</a></li>
+
+                <li><a href="financial.html"><i class="fa-solid fa-dollar-sign"></i> Financial</a></li>
+                <li>
+                    <a href="ai-insights.html">
+                        <i class="fa-solid fa-brain"></i>
+                        AI Insights
+                    </a>
+                </li>
+
+                <li>
+                    <a href="alerts.html">
+                        <i class="fa-solid fa-bell"></i>
+                        Alerts
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <main class="content">
+
+            <header class="topbar">
+
+                <div>
+
+                    <h2>Warehouse Management</h2>
+
+                    <p>Track inventory, warehouse utilization and stock movement.</p>
+
+                </div>
+
+            </header>
+
+            <section class="warehouse-summary">
+
+                <div class="summary-card">
+
+                    <h4>Total Inventory</h4>
+
+                    <h2>145,820</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Warehouse Capacity</h4>
+
+                    <h2>84%</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Low Stock Items</h4>
+
+                    <h2>27</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Inventory Accuracy</h4>
+
+                    <h2>99.2%</h2>
+
+                </div>
+
+            </section>
+
+            <section class="warehouse-grid">
+
+                <div class="analytics-card">
+
+                    <h3>Inventory Movement</h3>
+
+                    <div class="chart-area">
+
+                        <canvas id="inventoryChart"></canvas>
+
+                    </div>
+
+                </div>
+
+                <div class="analytics-card">
+
+                    <h3>AI Inventory Insights</h3>
+
+                    <div class="inventory-ai">
+
+                        <h4>Restock Recommendation</h4>
+
+                        <p>Product A should be replenished within 3 days based on projected demand.</p>
+
+                    </div>
+
+                    <div class="inventory-ai">
+
+                        <h4>Excess Inventory</h4>
+
+                        <p>Product D inventory exceeds target levels by 18%.</p>
+
+                    </div>
+
+                    <div class="inventory-ai">
+
+                        <h4>Warehouse Optimization</h4>
+
+                        <p>Move fast-moving SKUs closer to dispatch zones to reduce picking time.</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="inventory-table">
+
+                <h3>Inventory Status</h3>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Product</th>
+
+                            <th>Warehouse</th>
+
+                            <th>Available</th>
+
+                            <th>Reserved</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Product A</td>
+
+                            <td>Warehouse North</td>
+
+                            <td>2,840</td>
+
+                            <td>420</td>
+
+                            <td><span class="good">Healthy</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Product B</td>
+
+                            <td>Warehouse East</td>
+
+                            <td>180</td>
+
+                            <td>150</td>
+
+                            <td><span class="low">Low Stock</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Product C</td>
+
+                            <td>Warehouse South</td>
+
+                            <td>5,620</td>
+
+                            <td>940</td>
+
+                            <td><span class="good">Healthy</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Product D</td>
+
+                            <td>Warehouse West</td>
+
+                            <td>9,850</td>
+
+                            <td>310</td>
+
+                            <td><span class="over">Overstock</span></td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/warehouse.js"></script>
+
+</body>
+
+</html>

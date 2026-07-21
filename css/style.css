@@ -1,0 +1,118 @@
+/* ==============================
+   SUPPLYOS ENTERPRISE UI
+============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+
+    --primary: #2563EB;
+    --secondary: #0F766E;
+
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+
+    --sidebar: #0F172A;
+
+    --background: #F1F5F9;
+
+    --white: #ffffff;
+
+    --text: #1E293B;
+
+    --text2: #64748B;
+
+    --border: #E2E8F0;
+
+    --shadow: 0 10px 40px rgba(0, 0, 0, .08);
+
+    --radius: 18px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Inter', sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    overflow: hidden;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+
+    cursor: pointer;
+
+    border: none;
+
+    font-family: inherit;
+
+}
+
+input {
+
+    font-family: inherit;
+
+    outline: none;
+
+}
+
+.container {
+
+    width: 100%;
+
+    height: 100vh;
+
+    display: flex;
+
+}
+
+.card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+}
+
+body {
+
+    animation: fade .6s ease;
+
+}
+
+@keyframes fade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}

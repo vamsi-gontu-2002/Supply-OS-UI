@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Supplier Visibility</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/suppliers.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-cubes"></i>
+
+                <span>SupplyOS</span>
+
+            </div>
+
+            <ul>
+
+                <li>
+
+                    <a href="dashboard.html">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="suppliers.html">
+
+                        <i class="fa-solid fa-truck-field"></i>
+
+                        Suppliers
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="manufacturing.html">
+
+                        <i class="fa-solid fa-industry"></i>
+
+                        Manufacturing
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="forecast.html">
+
+                        <i class="fa-solid fa-chart-area"></i>
+
+                        Forecast
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="procurement.html">
+
+                        <i class="fa-solid fa-file-invoice"></i>
+
+                        Procurement
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="warehouse.html">
+
+                        <i class="fa-solid fa-warehouse"></i>
+
+                        Warehouse
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="financial.html">
+
+                        <i class="fa-solid fa-dollar-sign"></i>
+
+                        Financial
+
+                    </a>
+
+                </li>
+                <li>
+                    <a href="ai-insights.html">
+                        <i class="fa-solid fa-brain"></i>
+                        AI Insights
+                    </a>
+                </li>
+
+                <li>
+                    <a href="alerts.html">
+                        <i class="fa-solid fa-bell"></i>
+                        Alerts
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <!-- Main -->
+
+        <main class="content">
+
+            <header class="topbar">
+
+                <div>
+
+                    <h2>Supplier Visibility</h2>
+
+                    <p>Monitor supplier performance and risk in real time.</p>
+
+                </div>
+
+            </header>
+
+            <!-- Summary Cards -->
+
+            <section class="supplier-summary">
+
+                <div class="summary-card">
+
+                    <h4>Total Suppliers</h4>
+
+                    <h2>245</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>High Risk</h4>
+
+                    <h2>18</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Average Performance</h4>
+
+                    <h2>94%</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>On-Time Delivery</h4>
+
+                    <h2>96%</h2>
+
+                </div>
+
+            </section>
+
+            <!-- Filters -->
+
+            <section class="supplier-filter">
+
+                <input id="searchBox" type="text" placeholder="Search Supplier...">
+
+                <select id="riskFilter">
+
+                    <option>All Risks</option>
+
+                    <option>Low</option>
+
+                    <option>Medium</option>
+
+                    <option>High</option>
+
+                </select>
+
+            </section>
+            <section class="supplier-analytics">
+
+                <div class="analytics-card">
+
+                    <div class="card-header">
+
+                        <h3>Supplier Performance</h3>
+
+                    </div>
+
+                    <div class="chart-area">
+
+                        <canvas id="supplierChart"></canvas>
+
+                    </div>
+
+                </div>
+
+                <div class="analytics-card">
+
+                    <h3>AI Risk Insights</h3>
+
+                    <div class="ai-insight">
+
+                        <h4>ABC Industries</h4>
+
+                        <p>
+                            Risk Score increased due to delayed shipments and lower quality compliance.
+                        </p>
+                    </div>
+
+                    <div class="ai-insight">
+
+                        <h4>Prime Plastics</h4>
+
+                        <p>
+                            Stable supplier with consistent delivery and quality performance.
+                        </p>
+
+                    </div>
+
+                    <div class="ai-insight">
+
+                        <h4>Global Steel</h4>
+
+                        <p>
+                            Recommended for strategic sourcing due to excellent KPIs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- Table -->
+
+            <section class="supplier-table">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Supplier</th>
+
+                            <th>Risk</th>
+
+                            <th>Performance</th>
+
+                            <th>Delivery</th>
+
+                            <th>Quality</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="supplierTable">
+
+                        <tr>
+
+                            <td>ABC Industries</td>
+
+                            <td><span class="risk high">High</span></td>
+
+                            <td>87%</td>
+
+                            <td>82%</td>
+
+                            <td>91%</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Prime Plastics</td>
+
+                            <td><span class="risk medium">Medium</span></td>
+
+                            <td>94%</td>
+
+                            <td>95%</td>
+
+                            <td>96%</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Global Steel</td>
+
+                            <td><span class="risk low">Low</span></td>
+
+                            <td>98%</td>
+
+                            <td>99%</td>
+
+                            <td>98%</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Supply Hub</td>
+
+                            <td><span class="risk low">Low</span></td>
+
+                            <td>97%</td>
+
+                            <td>98%</td>
+
+                            <td>97%</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+    <script src="js/suppliers.js"></script>
+</body>
+
+</html>

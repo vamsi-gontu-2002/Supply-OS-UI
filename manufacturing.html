@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Manufacturing</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/manufacturing.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-cubes"></i>
+
+                <span>SupplyOS</span>
+
+            </div>
+
+            <ul>
+
+                <li>
+
+                    <a href="dashboard.html">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="suppliers.html">
+
+                        <i class="fa-solid fa-truck-field"></i>
+
+                        Suppliers
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="manufacturing.html">
+
+                        <i class="fa-solid fa-industry"></i>
+
+                        Manufacturing
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="forecast.html">
+
+                        <i class="fa-solid fa-chart-area"></i>
+
+                        Forecast
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="procurement.html">
+
+                        <i class="fa-solid fa-file-invoice"></i>
+
+                        Procurement
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="warehouse.html">
+
+                        <i class="fa-solid fa-warehouse"></i>
+
+                        Warehouse
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="financial.html">
+
+                        <i class="fa-solid fa-dollar-sign"></i>
+
+                        Financial
+
+                    </a>
+
+                </li>
+                <li>
+                    <a href="ai-insights.html">
+                        <i class="fa-solid fa-brain"></i>
+                        AI Insights
+                    </a>
+                </li>
+
+                <li>
+                    <a href="alerts.html">
+                        <i class="fa-solid fa-bell"></i>
+                        Alerts
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <main class="content">
+
+            <header class="topbar">
+
+                <div>
+
+                    <h2>Manufacturing Control Center</h2>
+
+                    <p>Monitor production, machines and factory operations.</p>
+
+                </div>
+
+            </header>
+
+            <section class="factory-summary">
+
+                <div class="summary-card">
+
+                    <h4>Production Today</h4>
+
+                    <h2>12,580 Units</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>OEE</h4>
+
+                    <h2>91%</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Machine Utilization</h4>
+
+                    <h2>88%</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Downtime</h4>
+
+                    <h2>2.3%</h2>
+
+                </div>
+
+            </section>
+
+            <section class="factory-grid">
+
+                <div class="analytics-card">
+
+                    <h3>Production Trend</h3>
+
+                    <div class="chart-area">
+
+                        <canvas id="productionChart"></canvas>
+
+                    </div>
+
+                </div>
+
+                <div class="analytics-card">
+
+                    <h3>AI Predictive Maintenance</h3>
+
+                    <div class="ai-box">
+
+                        <h4>CNC Machine #14</h4>
+
+                        <p>Maintenance recommended within 36 hours.</p>
+
+                    </div>
+
+                    <div class="ai-box">
+
+                        <h4>Assembly Robot #6</h4>
+
+                        <p>Motor vibration is above normal threshold.</p>
+
+                    </div>
+
+                    <div class="ai-box">
+
+                        <h4>Packaging Line</h4>
+
+                        <p>Operating efficiently with no anomalies detected.</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="production-table">
+
+                <h3>Production Line Status</h3>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Line</th>
+
+                            <th>Status</th>
+
+                            <th>Output</th>
+
+                            <th>Efficiency</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Line A</td>
+
+                            <td><span class="running">Running</span></td>
+
+                            <td>3200</td>
+
+                            <td>96%</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Line B</td>
+
+                            <td><span class="running">Running</span></td>
+
+                            <td>2980</td>
+
+                            <td>93%</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Line C</td>
+
+                            <td><span class="warning">Maintenance</span></td>
+
+                            <td>950</td>
+
+                            <td>61%</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Line D</td>
+
+                            <td><span class="stopped">Stopped</span></td>
+
+                            <td>0</td>
+
+                            <td>0%</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/manufacturing.js"></script>
+
+</body>
+
+</html>

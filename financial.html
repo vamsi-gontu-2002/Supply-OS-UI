@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Financial Analytics</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/financial.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-cubes"></i>
+
+                <span>SupplyOS</span>
+
+            </div>
+
+            <ul>
+
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+
+                <li><a href="suppliers.html"><i class="fa-solid fa-truck-field"></i> Suppliers</a></li>
+
+                <li><a href="manufacturing.html"><i class="fa-solid fa-industry"></i> Manufacturing</a></li>
+
+                <li><a href="forecast.html"><i class="fa-solid fa-chart-area"></i> Forecast</a></li>
+
+                <li><a href="procurement.html"><i class="fa-solid fa-file-invoice"></i> Procurement</a></li>
+
+                <li><a href="warehouse.html"><i class="fa-solid fa-warehouse"></i> Warehouse</a></li>
+
+                <li class="active"><a href="financial.html"><i class="fa-solid fa-dollar-sign"></i> Financial</a></li>
+                <li>
+                    <a href="ai-insights.html">
+                        <i class="fa-solid fa-brain"></i>
+                        AI Insights
+                    </a>
+                </li>
+
+                <li>
+                    <a href="alerts.html">
+                        <i class="fa-solid fa-bell"></i>
+                        Alerts
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <main class="content">
+
+            <header class="topbar">
+
+                <div>
+
+                    <h2>Financial Analytics</h2>
+
+                    <p>Track revenue, costs, budgets and profitability across the supply chain.</p>
+
+                </div>
+
+            </header>
+
+            <section class="financial-summary">
+
+                <div class="summary-card">
+
+                    <h4>Total Revenue</h4>
+
+                    <h2>$48.6M</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Total Expenses</h4>
+
+                    <h2>$31.8M</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Net Profit</h4>
+
+                    <h2>$16.8M</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Profit Margin</h4>
+
+                    <h2>34.5%</h2>
+
+                </div>
+
+            </section>
+
+            <section class="financial-grid">
+
+                <div class="analytics-card">
+
+                    <h3>Revenue vs Expenses</h3>
+
+                    <div class="chart-area">
+
+                        <canvas id="financeChart"></canvas>
+
+                    </div>
+
+                </div>
+
+                <div class="analytics-card">
+
+                    <h3>AI Financial Insights</h3>
+
+                    <div class="finance-ai">
+
+                        <h4>Budget Alert</h4>
+
+                        <p>Transportation costs are trending 9% above budget.</p>
+
+                    </div>
+
+                    <div class="finance-ai">
+
+                        <h4>Profit Opportunity</h4>
+
+                        <p>Optimizing supplier contracts could improve gross margin by approximately 4%.</p>
+
+                    </div>
+
+                    <div class="finance-ai">
+
+                        <h4>Cash Flow</h4>
+
+                        <p>Cash flow is healthy for the next quarter based on current projections.</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="budget-table">
+
+                <h3>Budget vs Actual</h3>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Category</th>
+
+                            <th>Budget</th>
+
+                            <th>Actual</th>
+
+                            <th>Variance</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Procurement</td>
+
+                            <td>$8.5M</td>
+
+                            <td>$8.1M</td>
+
+                            <td>-$0.4M</td>
+
+                            <td><span class="good">Under Budget</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Manufacturing</td>
+
+                            <td>$10.2M</td>
+
+                            <td>$10.4M</td>
+
+                            <td>+$0.2M</td>
+
+                            <td><span class="warning">Over Budget</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Logistics</td>
+
+                            <td>$5.4M</td>
+
+                            <td>$5.9M</td>
+
+                            <td>+$0.5M</td>
+
+                            <td><span class="danger">Critical</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Warehouse</td>
+
+                            <td>$3.6M</td>
+
+                            <td>$3.4M</td>
+
+                            <td>-$0.2M</td>
+
+                            <td><span class="good">Under Budget</span></td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/financial.js"></script>
+
+</body>
+
+</html>

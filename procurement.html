@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Procurement Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/procurement.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-cubes"></i>
+
+                <span>SupplyOS</span>
+
+            </div>
+
+            <ul>
+
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+
+                <li><a href="suppliers.html"><i class="fa-solid fa-truck-field"></i> Suppliers</a></li>
+
+                <li><a href="manufacturing.html"><i class="fa-solid fa-industry"></i> Manufacturing</a></li>
+
+                <li><a href="forecast.html"><i class="fa-solid fa-chart-area"></i> Forecast</a></li>
+
+                <li class="active"><a href="procurement.html"><i class="fa-solid fa-file-invoice"></i> Procurement</a>
+                </li>
+
+                <li><a href="warehouse.html"><i class="fa-solid fa-warehouse"></i> Warehouse</a></li>
+
+                <li><a href="financial.html"><i class="fa-solid fa-dollar-sign"></i> Financial</a></li>
+                <li>
+                    <a href="ai-insights.html">
+                        <i class="fa-solid fa-brain"></i>
+                        AI Insights
+                    </a>
+                </li>
+
+                <li>
+                    <a href="alerts.html">
+                        <i class="fa-solid fa-bell"></i>
+                        Alerts
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <main class="content">
+
+            <header class="topbar">
+
+                <div>
+
+                    <h2>Procurement Management</h2>
+
+                    <p>Manage purchase requests, approvals and supplier spending.</p>
+
+                </div>
+
+            </header>
+
+            <section class="proc-summary">
+
+                <div class="summary-card">
+
+                    <h4>Purchase Orders</h4>
+
+                    <h2>328</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Pending Approvals</h4>
+
+                    <h2>18</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Total Spend</h4>
+
+                    <h2>$12.4M</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Cost Savings</h4>
+
+                    <h2>$820K</h2>
+
+                </div>
+
+            </section>
+
+            <section class="proc-grid">
+
+                <div class="analytics-card">
+
+                    <h3>Purchase Order Status</h3>
+
+                    <div class="chart-area">
+
+                        <canvas id="poChart"></canvas>
+
+                    </div>
+
+                </div>
+
+                <div class="analytics-card">
+
+                    <h3>AI Procurement Insights</h3>
+
+                    <div class="proc-ai">
+
+                        <h4>Supplier Recommendation</h4>
+
+                        <p>Switch Product X sourcing to Global Steel to reduce cost by approximately 6%.</p>
+
+                    </div>
+
+                    <div class="proc-ai">
+
+                        <h4>Approval Delay</h4>
+
+                        <p>12 purchase requests have remained pending for more than 48 hours.</p>
+
+                    </div>
+
+                    <div class="proc-ai">
+
+                        <h4>Spend Alert</h4>
+
+                        <p>Packaging material spending is 14% above the monthly target.</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="po-table">
+
+                <h3>Recent Purchase Orders</h3>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>PO Number</th>
+
+                            <th>Supplier</th>
+
+                            <th>Amount</th>
+
+                            <th>Status</th>
+
+                            <th>Buyer</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>PO-1001</td>
+
+                            <td>ABC Industries</td>
+
+                            <td>$185,000</td>
+
+                            <td><span class="approved">Approved</span></td>
+
+                            <td>John</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>PO-1002</td>
+
+                            <td>Global Steel</td>
+
+                            <td>$94,000</td>
+
+                            <td><span class="pending">Pending</span></td>
+
+                            <td>Priya</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>PO-1003</td>
+
+                            <td>Prime Plastics</td>
+
+                            <td>$210,000</td>
+
+                            <td><span class="approved">Approved</span></td>
+
+                            <td>David</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>PO-1004</td>
+
+                            <td>Supply Hub</td>
+
+                            <td>$68,000</td>
+
+                            <td><span class="rejected">Rejected</span></td>
+
+                            <td>Rahul</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/procurement.js"></script>
+
+</body>
+
+</html>

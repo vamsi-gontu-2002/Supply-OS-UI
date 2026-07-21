@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SupplyOS Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-cubes"></i>
+
+                <span>SupplyOS</span>
+
+            </div>
+
+            <ul>
+
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="suppliers.html">
+                        <i class="fa-solid fa-truck-field"></i>
+                        Suppliers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="manufacturing.html">
+                        <i class="fa-solid fa-industry"></i>
+                        Manufacturing
+                    </a>
+                </li>
+
+                <li>
+                    <a href="forecast.html">
+                        <i class="fa-solid fa-chart-area"></i>
+                        Forecast
+                    </a>
+                </li>
+
+                <li>
+                    <a href="procurement.html">
+                        <i class="fa-solid fa-file-invoice"></i>
+                        Procurement
+                    </a>
+                </li>
+
+                <li>
+                    <a href="warehouse.html">
+                        <i class="fa-solid fa-warehouse"></i>
+                        Warehouse
+                    </a>
+                </li>
+
+                <li>
+                    <a href="financial.html">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        Financial
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ai-insights.html">
+                        <i class="fa-solid fa-brain"></i>
+                        AI Insights
+                    </a>
+                </li>
+
+                <li>
+                    <a href="alerts.html">
+                        <i class="fa-solid fa-bell"></i>
+                        Alerts
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main -->
+
+        <main class="content">
+
+            <header class="topbar">
+
+                <div>
+
+                    <h2>Executive Dashboard</h2>
+
+                    <p>
+
+                        Welcome back, Admin
+
+                    </p>
+
+                </div>
+
+                <div class="search">
+
+                    <input placeholder="Search Suppliers, PO, Warehouse...">
+
+                </div>
+
+                <div class="profile">
+
+                    <span class="material-icons">
+
+                        notifications
+
+                    </span>
+
+                    <span class="material-icons">
+
+                        settings
+
+                    </span>
+
+                    <img src="https://ui-avatars.com/api/?name=SupplyOS&background=2563EB&color=fff">
+
+                </div>
+
+            </header>
+
+            <section class="health-banner">
+
+                <div>
+
+                    <h2>Supply Chain Health Score</h2>
+
+                    <p>
+                        Overall operational performance across procurement,
+                        suppliers, logistics, inventory and manufacturing.
+                    </p>
+
+                </div>
+
+                <div class="score">
+
+                    94%
+
+                </div>
+
+            </section>
+
+            <!-- KPI Cards -->
+
+            <section class="kpis">
+
+                <div class="kpi-card spend">
+
+                    <div class="kpi-icon">
+
+                        <span class="material-icons">
+                            payments
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>Total Spend</p>
+
+                        <h2>$18.5M</h2>
+
+                        <span class="growth">▲ 12.8%</span>
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-card delivery">
+
+                    <div class="kpi-icon">
+
+                        <span class="material-icons">
+                            local_shipping
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>On-Time Delivery</p>
+
+                        <h2>95.6%</h2>
+
+                        <span class="growth">Excellent</span>
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-card supplier">
+
+                    <div class="kpi-icon">
+
+                        <span class="material-icons">
+                            groups
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>Suppliers</p>
+
+                        <h2>245</h2>
+
+                        <span class="growth">Active</span>
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-card fulfillment">
+
+                    <div class="kpi-icon">
+
+                        <span class="material-icons">
+                            verified
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>Fulfillment</p>
+
+                        <h2>98.1%</h2>
+
+                        <span class="growth">Target Achieved</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- Analytics Row -->
+
+            <section class="analytics">
+
+                <div class="chart-card">
+
+                    <div class="card-header">
+
+                        <h3>Monthly Spend Trend</h3>
+
+                        <button>View Report</button>
+
+                    </div>
+
+                    <div class="chart-container">
+
+                        <canvas id="categoryChart"></canvas>
+
+                    </div>
+
+                </div>
+
+                <div class="chart-card">
+
+                    <div class="card-header">
+
+                        <h3>Spend Category</h3>
+
+                    </div>
+
+                    <div class="donut">
+
+                        <div class="circle">
+
+                            72%
+
+                        </div>
+
+                    </div>
+
+                    <div class="legend">
+
+                        <span>
+                            <div class="dot blue"></div>Raw Material
+                        </span>
+
+                        <span>
+                            <div class="dot green"></div>Packaging
+                        </span>
+
+                        <span>
+                            <div class="dot orange"></div>Transport
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+            <section class="bottom-grid">
+
+                <div class="quick">
+
+                    <h3>Quick Navigation</h3>
+
+                    <div class="quick-grid">
+
+                        <a href="suppliers.html">Suppliers</a>
+
+                        <a href="manufacturing.html">Manufacturing</a>
+
+                        <a href="forecast.html">Forecast</a>
+
+                        <a href="procurement.html">Procurement</a>
+
+                        <a href="warehouse.html">Warehouse</a>
+
+                        <a href="financial.html">Financial</a>
+
+                    </div>
+
+                </div>
+
+                <div class="alerts">
+
+                    <h3>Live Alerts</h3>
+
+                    <div class="alert critical">
+
+                        Supplier ABC delivery delayed
+
+                    </div>
+
+                    <div class="alert warning">
+
+                        Inventory below threshold
+
+                    </div>
+
+                    <div class="alert success">
+
+                        Forecast completed successfully
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- AI + Purchase Orders -->
+
+            <section class="last-row">
+
+                <div class="purchase-card">
+
+                    <div class="card-header">
+
+                        <h3>Recent Purchase Orders</h3>
+
+                        <button>View All</button>
+
+                    </div>
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>PO</th>
+                                <th>Supplier</th>
+                                <th>Value</th>
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>PO-1001</td>
+                                <td>ABC Industries</td>
+                                <td>$180K</td>
+                                <td><span class="status success-status">Delivered</span></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>PO-1002</td>
+                                <td>Global Steel</td>
+                                <td>$320K</td>
+                                <td><span class="status warning-status">In Transit</span></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>PO-1003</td>
+                                <td>Prime Plastics</td>
+                                <td>$95K</td>
+                                <td><span class="status danger-status">Delayed</span></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>PO-1004</td>
+                                <td>Supply Hub</td>
+                                <td>$210K</td>
+                                <td><span class="status success-status">Delivered</span></td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="ai-panel">
+
+                    <h3>AI Recommendations</h3>
+
+                    <div class="ai-card">
+
+                        <h4>Supplier Risk</h4>
+
+                        <p>
+
+                            ABC Industries has a 92% probability of delivery delay next week.
+
+                        </p>
+
+                    </div>
+
+                    <div class="ai-card">
+
+                        <h4>Inventory Alert</h4>
+
+                        <p>
+
+                            Warehouse East will reach stockout in 5 days.
+
+                        </p>
+
+                    </div>
+
+                    <div class="ai-card">
+
+                        <h4>Cost Saving</h4>
+
+                        <p>
+
+                            Consolidate transportation to reduce logistics cost by 8%.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="timeline-card">
+
+                <h3>Recent Supply Chain Activities</h3>
+
+                <div class="timeline">
+
+                    <div class="event">
+
+                        <div class="dot blue"></div>
+
+                        <div>
+
+                            <h4>Purchase Order Approved</h4>
+
+                            <p>PO-1005 approved by Procurement Team</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="event">
+
+                        <div class="dot green"></div>
+
+                        <div>
+
+                            <h4>Shipment Dispatched</h4>
+
+                            <p>Container left Chennai Port</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="event">
+
+                        <div class="dot orange"></div>
+
+                        <div>
+
+                            <h4>Inventory Replenished</h4>
+
+                            <p>Warehouse South updated stock levels</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="event">
+
+                        <div class="dot red"></div>
+
+                        <div>
+
+                            <h4>Supplier Delay Alert</h4>
+
+                            <p>Supplier ABC delayed by 2 days</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+    </div>
+    <script src="js/dashboard.js"></script>
+    <div class="fab">
+
+        <span class="material-icons">
+
+            support_agent
+
+        </span>
+
+    </div>
+</body>
+
+</html>

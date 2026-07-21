@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Alerts Center</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/alerts.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-cubes"></i>
+
+                <span>SupplyOS</span>
+
+            </div>
+
+            <ul>
+
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="suppliers.html"><i class="fa-solid fa-truck-field"></i> Suppliers</a></li>
+                <li><a href="manufacturing.html"><i class="fa-solid fa-industry"></i> Manufacturing</a></li>
+                <li><a href="forecast.html"><i class="fa-solid fa-chart-area"></i> Forecast</a></li>
+                <li><a href="procurement.html"><i class="fa-solid fa-file-invoice"></i> Procurement</a></li>
+                <li><a href="warehouse.html"><i class="fa-solid fa-warehouse"></i> Warehouse</a></li>
+                <li><a href="financial.html"><i class="fa-solid fa-dollar-sign"></i> Financial</a></li>
+                <li><a href="ai-insights.html"><i class="fa-solid fa-brain"></i> AI Insights</a></li>
+
+                <li class="active">
+
+                    <a href="alerts.html">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        Alerts
+
+                    </a>
+
+                </li>
+                <li>
+                    <a href="reports.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <main class="content">
+
+            <header class="topbar">
+
+                <div>
+
+                    <h2>Alerts Center</h2>
+
+                    <p>Monitor and resolve operational issues across the supply chain.</p>
+
+                </div>
+
+            </header>
+
+            <section class="alert-summary">
+
+                <div class="summary-card">
+
+                    <h4>Critical Alerts</h4>
+
+                    <h2>12</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Open Alerts</h4>
+
+                    <h2>37</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>Resolved Today</h4>
+
+                    <h2>54</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h4>SLA Compliance</h4>
+
+                    <h2>96%</h2>
+
+                </div>
+
+            </section>
+
+            <section class="alert-grid">
+
+                <div class="analytics-card">
+
+                    <h3>Alert Severity</h3>
+
+                    <div class="chart-area">
+
+                        <canvas id="alertChart"></canvas>
+
+                    </div>
+
+                </div>
+
+                <div class="analytics-card">
+
+                    <h3>AI Suggested Actions</h3>
+
+                    <div class="ai-alert">
+
+                        <h4>Supplier Delay</h4>
+
+                        <p>Expedite shipment through alternate logistics partner.</p>
+
+                    </div>
+
+                    <div class="ai-alert">
+
+                        <h4>Inventory Risk</h4>
+
+                        <p>Transfer stock from Warehouse South to Warehouse East.</p>
+
+                    </div>
+
+                    <div class="ai-alert">
+
+                        <h4>Machine Failure</h4>
+
+                        <p>Schedule preventive maintenance within the next 12 hours.</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="alerts-table">
+
+                <h3>Live Alerts</h3>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Alert</th>
+                            <th>Severity</th>
+                            <th>Owner</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>ALT-001</td>
+
+                            <td>Supplier ABC delayed shipment</td>
+
+                            <td><span class="critical">Critical</span></td>
+
+                            <td>John</td>
+
+                            <td>Open</td>
+
+                            <td>
+
+                                <button class="ack-btn">Acknowledge</button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>ALT-002</td>
+
+                            <td>Warehouse East Low Stock</td>
+
+                            <td><span class="warning">Medium</span></td>
+
+                            <td>Priya</td>
+
+                            <td>Open</td>
+
+                            <td>
+
+                                <button class="ack-btn">Resolve</button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>ALT-003</td>
+
+                            <td>Machine Line C Downtime</td>
+
+                            <td><span class="critical">Critical</span></td>
+
+                            <td>David</td>
+
+                            <td>In Progress</td>
+
+                            <td>
+
+                                <button class="ack-btn">View</button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>ALT-004</td>
+
+                            <td>Budget Threshold Exceeded</td>
+
+                            <td><span class="info">Low</span></td>
+
+                            <td>Rahul</td>
+
+                            <td>Resolved</td>
+
+                            <td>
+
+                                <button class="ack-btn">History</button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/alerts.js"></script>
+
+</body>
+
+</html>
