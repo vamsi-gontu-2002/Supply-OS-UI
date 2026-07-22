@@ -11,7 +11,7 @@ if (poCtx) {
             labels: [
                 "Approved",
                 "Pending",
-                "Rejected"
+                "Revised"
             ],
 
             datasets: [{
