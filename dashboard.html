@@ -413,10 +413,30 @@
 
                             <tr>
 
-                                <th>PO</th>
-                                <th>Supplier</th>
-                                <th>Value</th>
-                                <th>Status</th>
+                                <th>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%;">
+                                        <span>PO</span>
+                                        <button class="po-sort-btn" data-column="0" style="background: transparent; border: none; cursor: pointer; padding: 4px; display: inline-flex; align-items: center; justify-content: center; color: #94a3b8; border-radius: 4px; font-size: 11px; transition: all 0.2s ease;" onmouseover="this.style.color='#2563EB'; this.style.backgroundColor='#f1f5f9';" onmouseout="this.style.color='#94a3b8'; this.style.backgroundColor='transparent';" title="Sort"><i class="fa-solid fa-sort"></i></button>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%;">
+                                        <span>Supplier</span>
+                                        <button class="po-sort-btn" data-column="1" style="background: transparent; border: none; cursor: pointer; padding: 4px; display: inline-flex; align-items: center; justify-content: center; color: #94a3b8; border-radius: 4px; font-size: 11px; transition: all 0.2s ease;" onmouseover="this.style.color='#2563EB'; this.style.backgroundColor='#f1f5f9';" onmouseout="this.style.color='#94a3b8'; this.style.backgroundColor='transparent';" title="Sort"><i class="fa-solid fa-sort"></i></button>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%;">
+                                        <span>Value</span>
+                                        <button class="po-sort-btn" data-column="2" style="background: transparent; border: none; cursor: pointer; padding: 4px; display: inline-flex; align-items: center; justify-content: center; color: #94a3b8; border-radius: 4px; font-size: 11px; transition: all 0.2s ease;" onmouseover="this.style.color='#2563EB'; this.style.backgroundColor='#f1f5f9';" onmouseout="this.style.color='#94a3b8'; this.style.backgroundColor='transparent';" title="Sort"><i class="fa-solid fa-sort"></i></button>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%;">
+                                        <span>Status</span>
+                                        <button class="po-sort-btn" data-column="3" style="background: transparent; border: none; cursor: pointer; padding: 4px; display: inline-flex; align-items: center; justify-content: center; color: #94a3b8; border-radius: 4px; font-size: 11px; transition: all 0.2s ease;" onmouseover="this.style.color='#2563EB'; this.style.backgroundColor='#f1f5f9';" onmouseout="this.style.color='#94a3b8'; this.style.backgroundColor='transparent';" title="Sort"><i class="fa-solid fa-sort"></i></button>
+                                    </div>
+                                </th>
 
                             </tr>
 
@@ -579,6 +599,88 @@
 
     </div>
     <script src="js/dashboard.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const table = document.querySelector(".purchase-card table");
+            if (!table) return;
+
+            const headers = table.querySelectorAll("th .po-sort-btn");
+            const tbody = table.querySelector("tbody");
+            if (!tbody) return;
+
+            let currentSortColumn = -1;
+            let isAscending = true;
+
+            function parseValue(valStr) {
+                let clean = valStr.replace(/[₹\s,]/g, "");
+                let multiplier = 1;
+                if (clean.endsWith("Cr")) {
+                    multiplier = 10000000;
+                    clean = clean.slice(0, -2);
+                } else if (clean.endsWith("L")) {
+                    multiplier = 100000;
+                    clean = clean.slice(0, -1);
+                }
+                return parseFloat(clean) * multiplier;
+            }
+
+            function getCellValue(row, index) {
+                const cell = row.cells[index];
+                if (!cell) return "";
+                const statusSpan = cell.querySelector(".status");
+                if (statusSpan) {
+                    return statusSpan.textContent.trim();
+                }
+                return cell.textContent.trim();
+            }
+
+            headers.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const columnIndex = parseInt(btn.getAttribute("data-column"), 10);
+                    
+                    if (currentSortColumn === columnIndex) {
+                        isAscending = !isAscending;
+                    } else {
+                        currentSortColumn = columnIndex;
+                        isAscending = true;
+                    }
+
+                    // Update header icons and colors
+                    headers.forEach((otherBtn, idx) => {
+                        const icon = otherBtn.querySelector("i");
+                        if (idx === columnIndex) {
+                            otherBtn.style.color = "#2563EB";
+                            if (isAscending) {
+                                icon.className = "fa-solid fa-sort-up";
+                            } else {
+                                icon.className = "fa-solid fa-sort-down";
+                            }
+                        } else {
+                            otherBtn.style.color = "#94a3b8";
+                            icon.className = "fa-solid fa-sort";
+                        }
+                    });
+
+                    // Sort rows
+                    const rows = Array.from(tbody.querySelectorAll("tr"));
+                    rows.sort((rowA, rowB) => {
+                        let valA = getCellValue(rowA, columnIndex);
+                        let valB = getCellValue(rowB, columnIndex);
+
+                        // Value column (index 2) requires numeric parsing
+                        if (columnIndex === 2) {
+                            return (parseValue(valA) - parseValue(valB)) * (isAscending ? 1 : -1);
+                        }
+
+                        return valA.localeCompare(valB, undefined, { numeric: true, sensitivity: 'base' }) * (isAscending ? 1 : -1);
+                    });
+
+                    // Re-append sorted rows
+                    rows.forEach(row => tbody.appendChild(row));
+                });
+            });
+        });
+    </script>
     <!-- <div class="fab">
 
         <span class="material-icons">

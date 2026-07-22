@@ -144,7 +144,7 @@ if (categoryCtx) {
 
                     "#F59E0B",
 
-                    "#EF4444"
+                    "#ef7a44ff"
 
                 ],
 
