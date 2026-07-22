@@ -14,7 +14,7 @@ if (ctx) {
 
                 label: "Units Produced",
 
-                data: [10000, 9400, 9800, 10200, 10400, 9600, 10000],
+                data: [10000, 10200, 10400, 10600, 10250, 10800, 10000],
 
                 borderColor: "#2563EB",
 
@@ -41,6 +41,17 @@ if (ctx) {
                 legend: {
 
                     display: false
+
+                }
+
+            },
+            scales: {
+
+                y: {
+
+                    min: 9000,
+
+                    max: 12000
 
                 }
 

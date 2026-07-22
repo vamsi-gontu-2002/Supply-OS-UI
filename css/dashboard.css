@@ -372,9 +372,9 @@
 
 .chart-container canvas {
 
-    width: 100% !important;
+    width: 96% !important;
 
-    height: 100% !important;
+    height: 90% !important;
 
 }
 
@@ -958,4 +958,44 @@ AI PANEL
 
     color: #fff;
 
+}
+
+
+
+.category-legend {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 10px 24px;
+    margin-top: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #555;
+}
+
+.legend-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    margin-right: 8px;
+}
+
+.raw {
+    background: #2563EB;
+}
+
+.packaging {
+    background: #22C55E;
+}
+
+.transport {
+    background: #F59E0B;
+}
+
+.utilities {
+    background: #EF4444;
 }

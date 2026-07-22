@@ -17,12 +17,12 @@ export default function Navbar() {
 
                 <Typography
                     variant="h5"
-                    fontWeight="bold"
+                    sx={{ fontWeight: "bold" }}
                 >
                     Supply Chain Control Tower
                 </Typography>
 
-                <Box flex={1} />
+                <Box sx={{ flex: 1 }} />
 
                 <Avatar>
                     A

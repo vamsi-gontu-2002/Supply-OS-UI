@@ -6,10 +6,10 @@ import Navbar from "../components/Navbar/Navbar";
 
 export default function AppLayout() {
     return (
-        <Box display="flex" height="100vh">
+        <Box sx={{ display: "flex", height: "100vh" }}>
             <Sidebar />
 
-            <Box flex={1} display="flex" flexDirection="column">
+            <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
                 <Navbar />
 
                 <Box

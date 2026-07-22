@@ -1,6 +1,7 @@
 function animateValue(id, start, end, duration) {
 
     let obj = document.getElementById(id);
+    if (!obj) return;
 
     let range = end - start;
 
@@ -53,7 +54,7 @@ if (spendCtx) {
 
                 label: "Monthly Spend",
 
-                data: [10, 11.1, 12.4, 13.2, 10.2, 11.2, 15.3],
+                data: [11, 11.1, 12.4, 13.2, 10.2, 11.2, 15.3],
 
                 borderColor: "#2563EB",
 
@@ -93,7 +94,7 @@ if (spendCtx) {
 
                     min: 0,
 
-                    max: 15
+                    max: 16
 
                 }
 
@@ -119,17 +120,17 @@ if (categoryCtx) {
 
         data: {
 
-            labels: [
+            // labels: [
 
-                "Raw Material",
+            //     "Raw Material",
 
-                "Packaging",
+            //     "Packaging",
 
-                "Transportation",
+            //     "Transportation",
 
-                "Utilities"
+            //     "Utilities"
 
-            ],
+            // ],
 
             datasets: [{
 
@@ -159,13 +160,13 @@ if (categoryCtx) {
 
             maintainAspectRatio: false,
 
-            cutout: "70%",
+            cutout: "50%",
 
             plugins: {
 
                 legend: {
 
-                    position: "bottom"
+                    position: "bottom",
 
                 }
 

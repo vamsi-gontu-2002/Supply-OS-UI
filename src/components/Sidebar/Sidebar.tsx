@@ -32,8 +32,8 @@ export default function Sidebar() {
                 flexDirection: "column",
             }}
         >
-            <Box p={3}>
-                <Typography variant="h5" fontWeight="bold">
+            <Box sx={{ p: 3 }}>
+                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
                     SupplyOS
                 </Typography>
 
