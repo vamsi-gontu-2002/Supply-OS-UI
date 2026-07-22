@@ -53,7 +53,7 @@ if (spendCtx) {
 
                 label: "Monthly Spend",
 
-                data: [9, 12, 10, 15, 18, 16, 21],
+                data: [10, 11.1, 12.4, 13.2, 10.2, 11.2, 15.3],
 
                 borderColor: "#2563EB",
 
@@ -82,6 +82,18 @@ if (spendCtx) {
                 legend: {
 
                     display: false
+
+                }
+
+            },
+
+            scales: {
+
+                y: {
+
+                    min: 0,
+
+                    max: 15
 
                 }
 

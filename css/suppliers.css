@@ -93,6 +93,8 @@
 
     text-align: left;
 
+    border: 1px solid #ccc;
+
 }
 
 .supplier-table td {
@@ -100,6 +102,8 @@
     padding: 18px;
 
     border-bottom: 1px solid #E5E7EB;
+
+    border: 1px solid #ccc;
 
 }
 
@@ -222,4 +226,17 @@ Analytics
 
 }
 
-/*Test*/
+.supplier-dashboard-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.supplier-table h3,
+.analytics-card h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}

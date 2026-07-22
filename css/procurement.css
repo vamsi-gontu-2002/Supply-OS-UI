@@ -63,6 +63,7 @@
     background: #F8FAFC;
     padding: 16px;
     text-align: left;
+    border: 1px solid #ccc;
 
 }
 
@@ -70,6 +71,7 @@
 
     padding: 18px;
     border-bottom: 1px solid #E5E7EB;
+    border: 1px solid #ccc;
 
 }
 

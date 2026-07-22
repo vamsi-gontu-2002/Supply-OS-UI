@@ -32,7 +32,7 @@
 
             </div>
 
-            <ul>
+            <!-- <ul>
 
                 <li>
 
@@ -143,6 +143,85 @@
                         Logout
                     </a>
                 </li>
+            </ul> -->
+
+            <ul>
+
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="suppliers.html">
+                        <i class="fa-solid fa-truck-field"></i>
+                        Suppliers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="manufacturing.html">
+                        <i class="fa-solid fa-industry"></i>
+                        Manufacturing
+                    </a>
+                </li>
+
+                <li>
+                    <a href="procurement.html">
+                        <i class="fa-solid fa-file-invoice"></i>
+                        Procurement
+                    </a>
+                </li>
+
+                <li>
+                    <a href="warehouse.html">
+                        <i class="fa-solid fa-warehouse"></i>
+                        Warehouse
+                    </a>
+                </li>
+
+                <li>
+                    <a style="color: #b3b3b3;">
+                        <i class="fa-solid fa-chart-area"></i>
+                        Forecast
+                    </a>
+                </li>
+
+                <li>
+                    <a style="color: #b3b3b3;">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        Financial
+                    </a>
+                </li>
+
+                <li>
+                    <a style="color: #b3b3b3;">
+                        <i class="fa-solid fa-brain"></i>
+                        AI Insights
+                    </a>
+                </li>
+
+                <li>
+                    <a style="color: #b3b3b3;">
+                        <i class="fa-solid fa-bell"></i>
+                        Alerts
+                    </a>
+                </li>
+
+                <li>
+                    <a style="color: #b3b3b3;">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Reports
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="index.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </a>
+                </li>
             </ul>
 
         </aside>
@@ -155,7 +234,7 @@
 
                 <div>
 
-                    <h2>Supplier Visibility</h2>
+                    <h2>Suppliers</h2>
 
                     <p>Monitor supplier performance and risk in real time.</p>
 
@@ -172,38 +251,38 @@
                     <h4>Total Suppliers</h4>
 
                     <h2>245</h2>
-
+                    <h6>15 new this quarter</h6>
                 </div>
 
                 <div class="summary-card">
 
-                    <h4>High Risk</h4>
+                    <h4>Average OTD Score</h4>
 
-                    <h2>18</h2>
-
+                    <h2>85%</h2>
+                    <h6>▲ 1.8% this quarter</h6>
                 </div>
 
                 <div class="summary-card">
 
-                    <h4>Average Performance</h4>
+                    <h4>Critical Suppliers</h4>
 
-                    <h2>94%</h2>
-
+                    <h2>12</h2>
+                    <h6>More than 25% dependency</h6>
                 </div>
 
                 <div class="summary-card">
 
-                    <h4>On-Time Delivery</h4>
+                    <h4>Avg Quality</h4>
 
-                    <h2>96%</h2>
-
+                    <h2>95%</h2>
+                    <h6>▲ 2.5% this quarter</h6>
                 </div>
 
             </section>
 
             <!-- Filters -->
 
-            <section class="supplier-filter">
+            <!-- <section class="supplier-filter">
 
                 <input id="searchBox" type="text" placeholder="Search Supplier...">
 
@@ -219,8 +298,113 @@
 
                 </select>
 
-            </section>
-            <section class="supplier-analytics">
+            </section> -->
+
+
+            <div class="supplier-dashboard-grid">
+
+                <div class="supplier-table">
+                    <div>
+                        <h3>Top Suppliers across Categories</h3>
+                    </div>
+                    <table>
+
+                        <thead>
+                            <tr>
+
+                                <th>Category</th>
+
+                                <th>Supplier</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="supplierTable">
+
+                            <tr>
+
+                                <td>IT</td>
+
+                                <td>ABC</td>
+
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Logistics</td>
+
+                                <td>XYZ</td>
+
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Utility</td>
+
+                                <td>MNP</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Raw Materials</td>
+
+                                <td>PQR</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div class="analytics-card">
+
+                    <h3>AI Risk Insights</h3>
+
+                    <div class="ai-insight">
+
+                        <h4>ABC Industries</h4>
+
+                        <p>
+                            Risk Score increased due to delayed shipments and lower quality compliance.
+                        </p>
+                    </div>
+
+                    <div class="ai-insight">
+
+                        <h4>Prime Plastics</h4>
+
+                        <p>
+                            Stable supplier with consistent delivery and quality performance.
+                        </p>
+
+                    </div>
+
+                    <div class="ai-insight">
+
+                        <h4>Global Steel</h4>
+
+                        <p>
+                            Recommended for strategic sourcing due to excellent KPIs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <!-- <section class="supplier-analytics">
 
                 <div class="analytics-card">
 
@@ -273,7 +457,7 @@
 
                 </div>
 
-            </section>
+            </section> -->
             <!-- Table -->
 
             <section class="supplier-table">
